@@ -1,0 +1,10 @@
+Flask == 1.0.2
+Flask_Mail == 0.9.1
+Flask_MySQLdb == 0.2.0
+Flask_WTF == 0.14.2
+WTForms == 2.2.1
+WTForms_Components == 0.10.4
+Werkzeug == 0.15.2
+coolname == 1.1.0
+email_verifier == 1.0.0
+itsdangerous == 1.1.0
