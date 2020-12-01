@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+{% block body %}
+    <div class="mb-5">
+        <div class="table-responsive-sm shadow-soft rounded">
+            <table class="table table-striped">
+                <tr>
+                    <th class="border-0" scope="col" >QID</th>
+                    <th class="border-0" scope="col" >QUESTION</th>
+                    <th class="border-0" scope="col" >A</th>
+                    <th class="border-0" scope="col" >B</th>
+                    <th class="border-0" scope="col" >C</th>
+                    <th class="border-0" scope="col" >D</th>
+                    <th class="border-0" scope="col" >ANSWER</th>
+                    <th class="border-0" scope="col" >MARKS</th>
+                </tr>
+                 <tbody>
+{% for res in callresults%}
+              <tr>
+                    <td>{{res['qid']}}</td>
+                    <td>{{res['q']}}</td>
+                    <td>{{res['a']}}</td>
+                    <td>{{res['b']}}</td>
+                    <td>{{res['c']}}</td>
+                    <td>{{res['d']}}</td>
+                    <td>{{res['ans']}}</td>
+                    <td>{{res['marks']}}</td>
+                   </tr>
+{% endfor %}
+                      </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}

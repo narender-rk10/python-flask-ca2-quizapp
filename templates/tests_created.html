@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+{% block body %}
+        <div class="mb-5">
+                    <div class="mb-4" style="text-align:center ;">
+                        <span class="h5">TEST RESULTS</span>
+                    </div>
+                    <div class="table-responsive-sm shadow-soft rounded">
+                        <table class="table table-striped">
+                            <tr>
+                                <th class="border-0" scope="col" >Test ID</th>
+                                <th class="border-0" scope="col" >Password</th>
+                                <th class="border-0" scope="col" >Subject</th>
+                                <th class="border-0" scope="col" >Topic</th>
+								<th class="border-0" scope="col" >Result</th>
+                            </tr>
+							 <tbody>
+            {% for test in tests %}
+                            <tr>
+								<td>{{test['test_id']}}</td>
+                                <td>{{test['password']}}</td>
+								<td>{{test['subject']}}</td>
+								<td>{{test['topic']}}</td>
+								<td><a class="btn btn-primary" href="/{{session.username}}/tests-created/{{test['test_id']}}">Result</a></td>
+                             </tr>
+            {% endfor %}
+                                  </tbody>
+                        </table>
+                    </div>
+                </div>
+{% endblock %}

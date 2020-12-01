@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+{% block body %}
+    <main>
+	<section class="min-vh-100 d-flex bg-primary align-items-center">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-8 col-lg-6 justify-content-center">
+                        <div class="card bg-primary shadow-soft border-light p-4">
+                            <div class="card-header text-center pb-0">
+                                <h2 class="h4">UPDATE QUESTIONS</h2>  
+                            </div>
+                            <div class="card-body">
+							    <form action="updatedispques" method="POST" class="mt-4">
+                                    <div class="form-group">
+                                        <label for="exampleInputIcon3">CHOOSE TEST ID:</label>
+                                        <div class="input-group mb-4">
+                                            <select name="choosetid" class="form-control" id="exampleFormControlSelect2" >
+                                            {% for test in cresults %}
+                                            <option value={{test['test_id']}}>{{test['test_id']}}</option>
+                                            {% endfor %}
+                                            </select>
+                                    <input type="submit" class="btn btn-block btn-primary" value="VIEW QUESTIONS"></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+{% block body %}
+{% from "includes/_formhelpers.html" import render_field %}
+<br><br><br>
+       <main>
+	<section class="min-vh-100 d-flex bg-primary align-items-center">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-8 col-lg-8 justify-content-center">
+                        <div class="card bg-primary shadow-soft border-light p-4">
+                            <div class="card-header text-center pb-0">
+							                <h2 class="h4">TEST LOGIN</h2>  
+                            </div>
+                            <div class="card-body">
+							                    <form action="" method="POST" class="mt-4">
+                                    <div class="form-group">
+                                      {{render_field(form.test_id, class="form-control")}}
+                                    </div>
+                                    <div class="form-group">
+                                      {{render_field(form.password, class="form-control")}}
+                                    </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-block btn-primary">Login For Test</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+<br><br><br>
+{% endblock %}

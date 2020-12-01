@@ -1,0 +1,67 @@
+<html>
+<head>
+<title>Quiz App</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css">
+<link rel="canonical" href="https://themesberg.com/product/ui-kits/neumorphism-ui/" />
+
+<!-- Favicon -->
+<link rel="apple-touch-icon" sizes="120x120" href="{{ url_for('static', filename='assets/img/favicon/apple-touch-icon.png') }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='assets/img/favicon/favicon-32x32.png') }}">
+<link rel="icon" type="image/png" sizes="16x16"  href="{{ url_for('static', filename='assets/img/favicon/favicon-16x16.png') }}">
+<link rel="manifest" href="{{ url_for('static', filename='assets/img/favicon/site.webmanifest') }}">
+<link rel="mask-icon" color="#ffffff"  href="{{ url_for('static', filename='static/assets/img/favicon/safari-pinned-tab.svg') }}">
+
+<!-- Fontawesome -->
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='vendor/@fortawesome/fontawesome-free/css/all.min.css') }}">
+
+<!-- Pixel CSS -->
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/neumorphism.css') }}">
+    <script
+			  src="https://code.jquery.com/jquery-3.4.1.min.js"
+			  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+			  crossorigin="anonymous"></script>
+    {% block head %}{% endblock %}
+  </head>
+  <body>
+    {% include 'includes/_navbar.html' %}
+    <div class="container">
+      {% include 'includes/_messages.html' %}
+      {% block body %}{% endblock %}
+    </div>
+
+<!-- Core -->
+<script src="{{ url_for('static', filename='vendor/jquery/dist/jquery.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/popper.js/dist/umd/popper.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/headroom.js/dist/headroom.min.js') }}"></script>
+
+<!-- Vendor JS -->
+<script src="{{ url_for('static', filename='vendor/onscreen/dist/on-screen.umd.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/nouislider/distribute/nouislider.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/waypoints/lib/jquery.waypoints.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/jarallax/dist/jarallax.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/jquery.counterup/jquery.counterup.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/jquery-countdown/dist/jquery.countdown.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js') }}"></script>
+<script src="{{ url_for('static', filename='vendor/prismjs/prism.js') }}"></script>
+
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+<!-- Neumorphism JS -->
+<script src="{{ url_for('static', filename='assets/js/neumorphism.js') }}"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <footer id="sticky-footer" class="py-4">
+  <div class="d-flex text-center justify-content-center align-items-center" role="contentinfo">
+                <p class="font-weight-bold font-medium mb-0">Copyright © QuizApp
+                    <span class="current-year">2020</span>. All rights reserved.</p>
+  </div><br>
+  <div class="d-flex text-center justify-content-center align-items-center" role="contentinfo">
+        <p class="font-weight-bold font-small mb-0"><span><a href="https://www.narenderkeswani.com/">Made with Love By NARENDER KESWANI</a></span></p>
+</div>
+</footer>
+</body>
+</html>

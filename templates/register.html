@@ -1,0 +1,77 @@
+{% extends 'layout.html' %}
+{% block body %}
+<br><br><br><br><br>
+       <main>
+	<section class="min-vh-100 d-flex bg-primary align-items-center">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-8 col-lg-6 justify-content-center">
+                        <div class="card bg-primary shadow-soft border-light p-4">
+                            <div class="card-header text-center pb-0">
+							<h2 class="h4">REGISTER</h2>  
+                            </div>
+                            <div class="card-body">
+							    <form action="" method="POST" class="mt-4">
+                                    <div class="form-group">
+                                        <label for="exampleInputIcon3">USERNAME</label>
+                                        <div class="input-group mb-4">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><span class="fas fa-user"></span></span>
+                                            </div>
+                                            <input name="username" class="form-control" id="exampleInputIcon3" placeholder="example@company.com" type="text" aria-label="email adress">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                      <label for="exampleInputIcon3">EMAIL</label>
+                                      <div class="input-group mb-4">
+                                          <div class="input-group-prepend">
+                                              <span class="input-group-text"><span class="fas fa-envelope"></span></span>
+                                          </div>
+                                          <input name="email" type="email" class="form-control" id="exampleInputIcon3" placeholder="example@company.com" type="text" aria-label="email adress">
+                                      </div>
+                                  </div>
+                                  <div class="form-group">
+                                    <label for="exampleInputIcon3">NAME</label>
+                                    <div class="input-group mb-4">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><span class="fas fa-envelope"></span></span>
+                                        </div>
+                                        <input name="name" class="form-control" id="exampleInputIcon3" placeholder="example@company.com" type="text" aria-label="email adress">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                  <label for="exampleInputPassword6">PASSWORD</label>
+                                  <div class="input-group mb-4">
+                                      <div class="input-group-prepend">
+                                          <span class="input-group-text"><span class="fas fa-unlock-alt"></span></span>
+                                      </div>
+                                      <input name="password" type="password" class="form-control" id="exampleInputPassword6" placeholder="Password" type="password" aria-label="Password" required>
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                <label for="exampleInputPassword6">PASSWORD</label>
+                                <div class="input-group mb-4">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><span class="fas fa-unlock-alt"></span></span>
+                                    </div>
+                                    <input name="cpassword" type="password" class="form-control" id="exampleInputPassword6" placeholder="Password" type="password" aria-label="Password" required>
+                                </div>
+                            </div>
+      <p style="margin: 0px;"><input type="submit" class="btn btn-primary" value="Submit" style="background-color: #1003eb"></p>
+    </form>
+    <p>Already have an account?
+        <a href="/login" id="register">Click here</a>.
+      </p>
+  </div>
+  <div>
+  </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<br><br><br><br><br>
+{% endblock %}

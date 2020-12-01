@@ -1,0 +1,53 @@
+{% extends 'layout.html' %}
+{% block body %}
+<section class="min-vh-100 d-flex bg-primary align-items-center">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-16 col-md-8 col-lg-12 justify-content-center">
+                <div class="card bg-primary shadow-soft border-light p-4">
+                    <div class="card-header text-center pb-0">
+                    <h2 class="h4">CONTACT US</h2>  
+                    </div>
+                    <div class="card-body">
+                            <form action="" method="POST" class="col-12 col-md-8 mx-auto">
+                                <!-- Form -->
+                                <div class="form-group">
+                                    <label for="nameInputIcon2">Your Name</label>
+                                    <div class="input-group mb-4">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><span class="far fa-user-circle"></span></span>
+                                        </div>
+                                        <input name="cname" class="form-control" id="nameInputIcon2" placeholder="e.g. Bonnie Green" type="text" aria-label="contact name input">
+                                    </div>
+                                </div>
+                                <!-- Form -->
+                                <div class="form-group">
+                                    <label for="emailInputIcon2">Your Email</label>
+                                    <div class="input-group mb-4">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><span class="far fa-envelope"></span></span>
+                                        </div>
+                                        <input name="cemail" class="form-control" id="emailInputIcon2" placeholder="example@company.com" type="email" aria-label="contact email input">
+                                    </div>
+                                </div>
+                                <!-- Form -->
+                                <div class="form-group">
+                                    <label for="exampleFormControlTextarea2">Your Query</label>
+                                    <textarea name="cquery" class="form-control" placeholder="Enter your message..." id="exampleFormControlTextarea2" rows="4"></textarea>
+                                </div>
+                                <!-- End of Form -->
+                            <div class="card-footer px-0 mx-auto">
+                                <center><input type="submit" class="btn btn-primary" value="Send message" /></center>
+                            </div>
+                        </form>
+                        </div>
+                        <!-- End of Contact Card -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        </section>
+        <!-- End of section -->
+    </main>
+{% endblock %}

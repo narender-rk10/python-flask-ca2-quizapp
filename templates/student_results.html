@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+{% block body %}
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Sr No</th>
+            <th scope="col">Name</th>
+            <th scope="col">Marks</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for result in data %}
+            <tr>
+                <td>{{result[0]}}</td>
+                <td>{{result[1]}}</td>
+                <td>{{result[2]}}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+<center><a class="btn btn-primary" id="download">Download as CSV</a></center>
+<script>
+    $('#download').on('click', function(){
+        var url = window.location.href;
+        var list = url.split('/');
+        $.ajax({
+            type:"POST",
+            dataType:"json",
+            data : {test_id: list[list.length-1]},
+            success: {
+            }
+        });
+    });
+    var url = window.location.href;
+    var list = url.split('/');
+    $("#download").attr('href','/static/' + list[list.length-1] + ".csv");
+</script>
+{% endblock %}

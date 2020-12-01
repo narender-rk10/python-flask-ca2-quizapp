@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+{% block body %}
+<br><br><br>
+       <center><h2 class="h4">SOLVE THE QUESTIONS</h2></center>
+<br><br>
+    <div class="mb-10">
+    <div class="table-responsive-sm shadow-soft rounded">
+<form action="" method="POST">
+    {% for data in callresults %}
+    <table class="table table-responsive-sm">
+<tr>
+  <th class="border-0" scope="col">Question No. {{data['qid']}}</th>
+	<th class="border-0" scope="col">Marks: {{data['marks']}}</th>
+</tr>
+<tr>
+    <th colspan="2"><center>{{data['q']}}</center></th>
+</tr>
+	<tr>
+		<td ><input type="radio" name={{data['qid']}} value="a">   {{data['a']}}</td>
+		<td ><input type="radio" name={{data['qid']}} value="b">   {{data['b']}}</td>
+	</tr>
+	<tr>
+		<td ><input type="radio"  name={{data['qid']}} value="c">  {{data['c']}}</td>
+		<td  ><input type="radio"  name={{data['qid']}} value="d">  {{data['d']}}</td>
+	</tr>
+</table>
+<br><br>
+    {% endfor %}
+        <center><input type="submit" class="btn btn-success" value="Finish Test"></center>
+        <br><br>
+    </form>
+<script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+{% endblock %}

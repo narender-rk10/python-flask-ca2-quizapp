@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+{% block body %}
+<div class="mb-5">
+	<div class="mb-4">
+		<center>
+		<span class="h5">YOUR RESULTS</span>
+	</center>
+	</div>
+	<div class="table-responsive-sm shadow-soft rounded">
+		<table class="table table-striped">
+			<tr>
+			<td class="border-0" class="border-0" scope="col">Test ID</td>
+			<td class="border-0" scope="col">Subject</td>
+			<td class="border-0" scope="col">Topic</td>
+			<td class="border-0" scope="col">Marks</td>
+		</tr>
+	<tbody>
+		{% for test in tests %}
+    <tr>	
+    	<td>{{test['test_id']}}</td> 
+		<td>{{test['subject']}}</td> 
+		<td>{{test['topic']}}</td> 
+    	<td>{{test['marks']}}</td> 
+	</tr>
+	{% endfor %}
+	</tbody>
+</table>
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,96 @@
+{% extends 'layout.html' %}
+{% block body %}
+   <h1 align="center">Welcome {{session.name}}</h1>
+   <br><br><br>
+   <div class="container">
+	<div class="card shadow">
+		<div class="card-body">
+	<h3 align="center">TEACHER'S SECTION</h3>
+	<br><br>
+	<div class="row" style="align-content: center;">
+
+		<div class="col-3 box" style="margin:12px;">
+			<div class="card shadow">
+				<div class="card-body">
+					<center><img src="static/notepad.png" alt="" width="100px"></center><br>
+					<center><a href="/create-test" class="btn btn-primary text-secondary mr-3">Create Test</a></center>
+				</div>
+			</div>
+	   </div>
+
+		  <div class="col-3 box" style="margin:12px;">
+			<div class="card shadow">
+				<div class="card-body">
+					<center><img src="static/e16.png" alt="" width="100px"></center><br>
+					<center><a href="/viewquestions" class="btn btn-primary text-secondary mr-3">View Questions</a></center>
+				</div>
+			</div>
+		  </div>
+
+		  <div class="col-3 box" style="margin:12px;">
+			<div class="card shadow">
+				<div class="card-body">
+					<center><img src="static/e16.png" alt="" width="100px"></center><br>
+					<center><a href="/deltidlist" class="btn btn-primary text-secondary mr-3">Delete Questions</a></center>
+				</div>
+			</div>
+		  </div>
+
+		  <div class="col-3 box" style="margin:12px;">
+			<div class="card shadow">
+				<div class="card-body">
+					<center><img src="static/e16.png" alt="" width="100px"></center><br>
+					<center><a href="/updatetidlist" class="btn btn-primary text-secondary mr-3">Update Questions</a></center>
+				</div>
+			</div>
+		  </div>
+
+		  <div class="col-3 box" style="margin:12px;">
+			<div class="card shadow">
+				<div class="card-body">
+					<center><img src="static/research.png" alt="" width="100px"></center><br>
+					<center><a href="/{{session.username}}/tests-created" class="btn btn-primary text-secondary mr-3">Student Results</a></center>
+				</div>
+			</div>
+		</div>
+
+		  </div>
+  </div>
+	</div>
+   </div>
+<br><br><br>
+  </div>
+  <br><br>
+
+  <div class="container">
+	<div class="card shadow">
+		<div class="card-body">
+	<h3 align="center">STUDENT'S SECTION</h3>
+	<br><br><br>
+	<center>
+	<div class="row">
+
+		<div class="col-6 box" >
+			<div class="card shadow">
+				<div class="card-body">
+					<center><img src="static/notepad.png" alt="" width="100px"></center><br>
+					<center><a href="/give-test" class="btn btn-primary text-secondary mr-3">Give Test</a></center>
+				</div>
+			</div>
+		  </div>
+		  
+		<div class="col-6 box">
+			<div class="card shadow">
+				<div class="card-body">
+					<center><img src="static/result.png" alt="" width="100px"></center><br>
+					<center><a  href="/{{session.username}}/tests-given" class="btn btn-primary text-secondary mr-3">Results</a></center>
+				</div>
+			</div>
+		</div>
+		  </div>
+		  </center>
+  </div>
+	</div>
+   </div>
+   <br><br><br>
+{% endblock %}

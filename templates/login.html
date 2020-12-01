@@ -1,0 +1,54 @@
+{% extends 'layout.html' %}
+{% block body %}
+<br><br><br><br><br>
+       <main>
+	<section class="min-vh-100 d-flex bg-primary align-items-center">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-8 col-lg-6 justify-content-center">
+                        <div class="card bg-primary shadow-soft border-light p-4">
+                            <div class="card-header text-center pb-0">
+							<h2 class="h4">LOGIN</h2>  
+                            </div>
+                            <div class="card-body">
+							    <form action="" method="POST" class="mt-4">
+                                    <div class="form-group">
+                                        <label for="exampleInputIcon3">USERNAME</label>
+                                        <div class="input-group mb-4">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><span class="fas fa-envelope"></span></span>
+                                            </div>
+                                            <input name="username" class="form-control" id="exampleInputIcon3" placeholder="example@company.com" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="form-group">
+                                            <label for="exampleInputPassword6">PASSWORD</label>
+                                            <div class="input-group mb-4">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><span class="fas fa-unlock-alt"></span></span>
+                                                </div>
+                                                <input name="password" type="password" class="form-control" id="exampleInputPassword6" placeholder="Password" type="password" aria-label="Password" required>
+                                            </div>
+                                        </div>
+                                        <div class="d-block d-sm-flex justify-content-between align-items-center mb-4">
+                                            <div><a href="/lostpassword" class="font-weight-bold">Lost password?</a></div>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-block btn-primary">Sign in</button>
+                                </form>
+                                <div class="d-block d-sm-flex justify-content-center align-items-center mt-4">
+                                    <span class="font-weight-normal">
+                                        Not registered?
+                                        <a href="/register" class="font-weight-bold">Create account</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+<br><br><br><br><br>
+{% endblock %}
