@@ -19,16 +19,16 @@ from wtforms.validators import ValidationError
 
 app = Flask(__name__)
 
-app.config['MYSQL_HOST'] = 'mysql.stackcp.com'
-app.config['MYSQL_USER'] = 'quizapp-313537b23f'
-app.config['MYSQL_PORT'] = 54375
-app.config['MYSQL_PASSWORD'] = 'narenderBoi1'
-app.config['MYSQL_DB'] = 'quizapp-313537b23f'
+app.config['MYSQL_HOST'] = 'localhost'
+app.config['MYSQL_USER'] = 'root'
+app.config['MYSQL_PORT'] = 3308
+app.config['MYSQL_PASSWORD'] = 'password'
+app.config['MYSQL_DB'] = 'quizapp'
 app.config['MYSQL_CURSORCLASS'] = 'DictCursor'
 
 app.secret_key= 'ca2'
 
-sender = 'care@narenderkeswani.com'
+sender = 'youremailsender@abc.com'
 
 mysql = MySQL(app)
 
@@ -54,7 +54,7 @@ def index():
 @app.route('/contact', methods=['GET','POST'])
 def contact():
 	if request.method == 'POST':
-		careEmail = "narender.rk10@gmail.com"
+		careEmail = "youremail@gmail.com"
 		cname = request.form['cname']
 		cemail = request.form['cemail']
 		cquery = request.form['cquery']
@@ -63,7 +63,7 @@ def contact():
 		server1.ehlo()
 		server1.starttls()
 		server1.ehlo()
-		server1.login('care@narenderkeswani.com', 'Narender@boi')
+		server1.login('youremail.com', 'password')
 		server1.sendmail(sender,cemail,"YOUR QUERY WILL BE PROCESSED!")
 		msgtocc = " ".join(["NME:", cname, "EMAIL:", cemail, "QUERY:", cquery]) 
 		server1.sendmail(sender, careEmail, msgtocc)
@@ -82,7 +82,7 @@ def lostpassword():
 			server.ehlo()
 			server.starttls()
 			server.ehlo()
-			server.login('care@narenderkeswani.com', 'Narender@boi')
+			server.login('youremail@gmail.com', 'password')
 			sesOTPfp = generateOTP()
 			session['tempOTPfp'] = sesOTPfp
 			session['seslpemail'] = lpemail
@@ -149,7 +149,7 @@ def register():
 			server.ehlo()
 			server.starttls()
 			server.ehlo()
-			server.login('care@narenderkeswani.com', 'Narender@boi')
+			server.login('yoursender@gmail.com', 'password')
 			sesOTP = generateOTP()
 			session['tempOTP'] = sesOTP
 			server.sendmail(sender, email, "Your OTP Verfication code is "+sesOTP+".")
